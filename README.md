@@ -1,4 +1,6 @@
-# EJERCICIOS PHP DAW2D
+# EJERCICIOS TEMA1
 
 
-- Repositorio para guardar los ejercicios realizados en clase en el tema de introduccion a PHP y al Desarrollo Entorno Servidor
+- Curso 19-20
+- Grupo DAW2D
+- Autor Joaquin Sanz
