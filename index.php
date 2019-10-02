@@ -8,6 +8,7 @@
 </head>
 <body>
    <h1>Ejercicios tema 1 PHP</h1> 
-   <p>Vamos a probar GIT antes de empezar</p>
+   <p>Vamos a probar GIT antes de empezar
+   , escrito en clase</p>
 </body>
 </html>
