@@ -46,6 +46,20 @@ class App
         $lista[] = $deseo;
         $_SESSION['lista'] = $lista;
     }
+    public function delete(){
+        if (isset($_GET[$key])){
+            unset($_SESSION['lista'][$key]);
+            header ('Location: /Session/app.php?metod=home');
+        }
+    }
+
+    public function deleteAll(){
+        
+        unset($_SESSION['lista']);
+        header ('Location: /Session/app.php?metod=home');
+        
+    }
+    
 }
 
 $app = new App();

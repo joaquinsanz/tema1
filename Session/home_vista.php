@@ -12,9 +12,12 @@
         <?php
         foreach ($lista as $key => $deseo){
             echo"<li>" . $deseo . "</li>";
+            echo "<li>" . "<a href ='/Session/app.php?metod=delete'>" .  " eliminar" . "</a>" . "</li>";
             
         }
+        echo "<button>" . "<a href ='/Session/app.php?metod=deleteAll'>" .  " eliminar todo" . "</a>" . "</button>";
         ?>
+        
     </ul>
     <h1>Nuevo deseo</h1>
     <form action="app.php?method=home" method ="get"> 
