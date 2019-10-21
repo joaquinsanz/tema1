@@ -46,12 +46,6 @@ class App
         }      
         
     }
-    public function flush(){
-      session_destroy();
-      unset($_SESSION);
-      header ("Location: /");
-    }
-    // falta el método para sacar el numero de fotos  V = n! / 6! (n-6!)
 
 
 $app = new App();
@@ -66,6 +60,9 @@ if (method_exists($app, $method)) {
     exit('no encontrado');
 }
 
+//esto de aqui cuando puedas lo cambias e intentas hacer los ejercicios de php bien de manera que en vez
+// de sacar un 0 sacaras un 3,5 con lo que suspenderás igual pero no es tan humillante
+// adios
 
 
 
