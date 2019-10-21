@@ -49,7 +49,7 @@ class App
       unset($_SESSION);
       header ("Location: /");
     }
-}
+    // falta el método para sacar el numero de apuestas  V = n! / 6! (n-6!)
 
 
 $app = new App();
