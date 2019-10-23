@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Vista Galeria</title>
 </head>
+
 <body>
     <form action="index.php" method="POST" enctype="multipart/form-data">
         <table id="formularioSubida" border="0">
@@ -24,13 +26,13 @@
                 </td>
             </tr>
             <tr>
-                <td> 
-                    <input type="button" id="botonAnnadir" onClick="agregarFila('formularioSubida','botonAnnadir')" value="Añadir archivo" style="width:138px;">        
-                    <input type="submit" name="botonSubir" value="Subir"> 
+                <td>
+                    <input type="button" id="botonAnadir" onClick="agregarFila('formularioSubida','botonAnnadir')" value="Añadir archivo" style="width:138px;">
+                    <input type="submit" name="botonSubir" value="Subir">
                 </td>
             </tr>
         </table>
     </form>
 </body>
-</html>
 
+</html>

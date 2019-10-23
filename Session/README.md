@@ -1,3 +1,6 @@
+
+# TODO
+
 public function delete(){
     if (isset($_GET[$key])){
         unset($_SESSION['lista'][$key]);
