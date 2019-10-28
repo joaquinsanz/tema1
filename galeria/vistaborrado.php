@@ -32,7 +32,8 @@
 
             <thead>
                 <h3>Quiers borrar esta imagen?</h3>
-                <input name="file" type="hidden" value="<?php echo $file ?>">
+                <input name="file" type="hidden" value="<?php echo $file //con esto confimamos bora 
+                                                        ?>">
                 <input name="method" type="hidden" value="delete">
             </thead>
             <input type="submit" name="Borra" value="Borrar">

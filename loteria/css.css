@@ -6,13 +6,13 @@
 td {
 	border: 1px solid black;
 }
-
-.unselected a:link {
+/* con este css cambio el estilo de los enlaces si ha sido seleccionado o no */
+.noseleccionado a:link {
 	color: red;
 }
-.selected a:visited {
+.seleccionado a:visited {
 	color: black;
 }
-.unselected a:visited {
+.noseleccionado a:visited {
 	color: red;
 }
