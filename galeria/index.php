@@ -25,13 +25,13 @@ class App
 
         if (file_exists($target_file)) {
             echo "Ya existe el archivo.";
-            $uploadOk = 0;
+            $uploadIsOk = 0;
         }
 
 
         if ($_FILES["imagen1"]["size"] > 500000) {
             echo "Imagen demasiado grande.";
-            $uploadOk = 0;
+            $uploadIsOk = 0;
         }
 
 
@@ -67,8 +67,14 @@ class App
     public function borrar()
     {
         $file = $_GET['file'];
-        filedelete[$file];
+        unlink($file);
         header('location: .');
+    }
+    public function show()
+    {
+        $file = $_GET['file'];
+        $stats = stat($file);
+        require 'vistaborrado.php';
     }
 }
 
