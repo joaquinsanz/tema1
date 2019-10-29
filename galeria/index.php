@@ -2,17 +2,17 @@
 class App
 {
 
-
+    const FOLDERP = "imagenes/";
     function subirImagen()
     {
 
         $target_dir = "imagenes/"; // ubicacion donde va a gaurdar y leer imagenes
-        $target_file = $target_dir . basename($_FILES["imagen1"]["name"]);
+        $target_file = $target_dir . basename($_FILES["imagen"]["name"]);
         $uploadIsOk = 1; //booleano si ha subido
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
         if (isset($_POST["submit"])) {
-            $check = getimagesize($_FILES["imagen1"]["tmp_name"]); // tmp_name es el nombre temporal
+            $check = getimagesize($_FILES["imagen"]["tmp_name"]); // tmp_name es el nombre temporal
             if ($check !== false) {
                 echo "El archivo es una imagen - " . $check["mime"] . ".";
                 $uploadIsOk = 1;
@@ -29,7 +29,7 @@ class App
         }
 
 
-        if ($_FILES["imagen1"]["size"] > 500000) { // controlar no subir imagen con gran tamaño
+        if ($_FILES["imagen"]["size"] > 500000) { // controlar no subir imagen con gran tamaño
             echo "Imagen demasiado grande.";
             $uploadIsOk = 0;
         }
@@ -46,9 +46,9 @@ class App
         if ($uploadIsOk == 0) {
             echo "Su imagen no se ha subido"; // si la booleana de subir es 0 no se sube
         } else {
-            if (move_uploaded_file($_FILES["imagen1"]["tmp_name"], $target_file)) { //sino la sube y manda a el metodo vergaleria
+            if (move_uploaded_file($_FILES["imagen"]["tmp_name"], $target_file)) { //sino la sube y manda a el metodo vergaleria
                 header('Location: index.php?method=verGaleria');
-                echo "La imagen " . basename($_FILES["imagen1"]["name"]) . " ha sido subido.";
+                echo "La imagen " . basename($_FILES["imagen"]["name"]) . " ha sido subido.";
             } else {
                 header('Location: index.php?method=verGaleria');
                 echo "Hubo un error al subir la imagen"; //si falla lo pone

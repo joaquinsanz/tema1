@@ -7,6 +7,9 @@ class App
     {
         session_start();
     }
+    public function vista(){
+        require "vista.php";
+    }
 
     public function toggle()
     {
@@ -26,7 +29,7 @@ class App
         }
         $_SESSION['numerosSelecionados']=sizeof($_SESSION['apuesta']);
         
-        header('Location: /loteria/vista.php');
+        header('Location: /loteria.php?method=vista');
     
 
     }
@@ -61,17 +64,16 @@ class App
       {
         $_SESSION['mansaje'] = "Error la apuesta debe tener selecionados al menos 6 números.";
       }
-      header('Location: /loteria/vista.php');
+      header('Location: /loteria.php?method=vista');
 
     }
-
 
 
 $app = new App();
 if (isset($_GET['method'])) {
     $method = $_GET['method'];
 } else {
-    $method = 'toggle';
+    $method = 'vista';
 }
 if (method_exists($app, $method)) {
     $app->$method();

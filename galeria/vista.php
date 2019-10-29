@@ -9,6 +9,17 @@
 </head>
 
 <body>
+    <div>
+        <table>
+            <tr>
+                <?php
+                foreach ($files as $file) {
+                    echo "<td><a href='?method=show&file=$file' ><img src='$file' /></a></td> ";
+                }
+                ?></tr>
+        </table>
+
+    </div>
     <form action="index.php" method="POST" enctype="multipart/form-data">
         <table id="formularioSubida" border="0">
             <thead>
@@ -16,18 +27,14 @@
             </thead>
             <tr>
                 <td>
-                    <div class="inputImagenModificado">
-                        <input class="inputImagenOculto" name="imagen1" type="file">
-                        <div class="inputParaMostrar">
-                            <input>
-                            <img src="imagenes/button_select2.gif">
-                        </div>
+                    <div>
+                        <input name="imagen" type="file">
+                    </div>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="button" id="botonAnadir" onClick="agregarFila('formularioSubida','botonAnnadir')" value="Añadir archivo" style="width:138px;">
                     <input type="submit" name="botonSubir" value="Subir">
                 </td>
             </tr>
